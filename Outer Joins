@@ -1,0 +1,33 @@
+LEFT OUTER JOIN
+
+SELECT
+  a.Order_Number,
+  b.Customer_Name,
+  b.Postal_Code
+FROM orders a
+LEFT JOIN customers b -- alternatively use LEFT OUTER JOIN instead of LEFT JOIN
+ON a.Customer_Number = b.Customer_Number;
+
+RIGHT OUTER JOIN
+
+SELECT
+  a.Order_Number,
+  b.Customer_Name,
+  b.Postal_Code
+FROM orders a
+RIGHT JOIN customers b -- alternatively use RIGHT OUTER JOIN instead of RIGHT JOIN
+ON a.Customer_Number = b.Customer_Number;
+
+FULL OUTER JOIN
+
+SELECT
+  a.Order_Number,
+  b.Customer_Name,
+  b.Postal_Code
+FROM orders a
+FULL JOIN customers b --alternatively use ‘FULL OUTER JOIN’ instead of ‘FULL JOIN’
+ON a.Customer_Number = b.Customer_Number;
+
+Difference Between INNER and OUTER JOIN:::
+As you might have figured out, the key difference between INNER JOIN and OUTER JOIN is whether to include the rows for which we don’t have a match in the other table. 
+While an INNER JOIN only returns rows where there is a match between the two tables, an OUTER JOIN (depending on the type) also returns those rows for which there is no matching row in the other table.
