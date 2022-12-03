@@ -1,0 +1,12 @@
+SELECT orders.order_id, suppliers.name   
+FROM suppliers  
+INNER JOIN orders  
+ON suppliers.supplier_id = orders.supplier_id  
+ORDER BY order_id;
+
+SELECT p. p_id, p.cus_id, p.p_name, c1.name1, c2.name2  
+FROM product AS p  
+LEFT JOIN customer1 AS c1  
+ON p.cus_id=c1.cus_id  
+LEFT JOIN customer2 AS c2  
+ON p.cus_id = c2.cus_id
